@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f8fafc;
@@ -38,6 +43,7 @@ body {
   margin-bottom: 10px;
   display: block;
 }
+
 .menyuhavolalari {
   display: flex;
   gap: 20px;
@@ -164,6 +170,7 @@ body {
   font-size: 12px;
   font-weight: bold;
   border-radius: 6px;
+  z-index: 1;
 }
 
 .rasmqutisi {
@@ -239,6 +246,26 @@ body {
   border-color: #2563eb;
 }
 
+/* Video qismi */
+.videobolimi {
+  padding: 40px 0 10px 0;
+}
+
+.videoqutisi {
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.videoqutisi video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* 4. Biz haqimizda */
 .haqidabolimi {
   background-color: #ffffff;
@@ -280,4 +307,145 @@ body {
   font-size: 14px;
   padding-top: 20px;
   color: #64748b;
+}
+
+/* ===== TELEFON VA PLANSHET REJIMI ===== */
+
+/* Planshet (900px va undan kichik) */
+@media (max-width: 900px) {
+  .menyutarkibi {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .menyuhavolalari {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .bannerbolimi {
+    padding: 60px 0;
+  }
+
+  .bannermatni h1 {
+    font-size: 30px;
+  }
+}
+
+/* Telefon (600px va undan kichik) */
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 110px;
+  }
+
+  .idish {
+    padding: 0 15px;
+  }
+
+  .menyutarkibi {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 50px !important;
+    height: 46px !important;
+  }
+
+  .menyuhavolalari {
+    gap: 14px;
+    font-size: 14px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 4px;
+  }
+
+  .savatchatugma {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .bannerbolimi {
+    padding: 40px 0;
+    margin-bottom: 20px;
+  }
+
+  .bannermatni h1 {
+    font-size: 24px;
+  }
+
+  .bannermatni p {
+    font-size: 14px;
+  }
+
+  .tugma {
+    padding: 10px 22px;
+  }
+
+  .mahsulotlarbolimi {
+    padding: 20px 15px;
+  }
+
+  .bolimsarlavhasi {
+    font-size: 22px;
+  }
+
+  .mahsulotlartori {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .rasmqutisi {
+    height: 150px;
+    padding: 10px;
+  }
+
+  .mahsulothaqida {
+    padding: 12px;
+  }
+
+  .mahsulotnomi {
+    font-size: 15px;
+  }
+
+  .joriynarx {
+    font-size: 15px;
+  }
+
+  .eskinarx {
+    font-size: 12px;
+  }
+
+  .narxlar {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .savatchagaqoshish {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .videobolimi {
+    padding: 20px 0 0 0;
+  }
+
+  .videoqutisi {
+    border-radius: 8px;
+  }
+
+  .haqidabolimi {
+    padding: 30px 0;
+  }
+
+  .pastkitarkibi {
+    flex-direction: column;
+    text-align: center;
+  }
 }
